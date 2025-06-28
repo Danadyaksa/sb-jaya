@@ -1,0 +1,58 @@
+@extends('layouts.main')
+@section('content')
+
+    {{-- Judul akan mengambil nama kategori dari database --}}
+            <x-page-title-banner title="{{ $category->name }}" :breadcrumbs="$breadcrumbs" />
+
+
+
+    <div class="container mx-auto px-4 py-12">
+        
+        {{-- Grid Produk --}}
+        @if($products->count() > 0)
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                @foreach ($products as $product)
+                    {{-- Kartu Produk Dinamis --}}
+                    <div class="border border-gray-200 rounded-lg group overflow-hidden">
+                        {{-- Nanti kita arahkan link ini ke halaman detail produk dinamis --}}
+                        <a href="{{ route('products.show', $product) }}">
+                            <div class="bg-white p-4">
+                                <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://via.placeholder.com/300x300/F3F4F6/000000?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-56 object-contain">
+                            </div>
+                        </a>
+                        <div class="p-4">
+                            <a href="{{ route('products.show', $product) }}">
+                                <h3 class="font-bold text-gray-800 text-lg mb-2 truncate" title="{{ $product->name }}">{{ $product->name }}</h3>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2">STOK TERSEDIA : {{ $product->stock }}</p>
+                            <p class="text-2xl font-extrabold text-gray-900 mb-4">
+                                Rp {{ number_format($product->price, 0, ',', '.') }}
+                            </p>
+                            {{-- ▼▼▼ GANTI DENGAN SATU BARIS INI ▼▼▼ --}}
+
+{{-- ▼▼▼ GANTI SATU BARIS LIVEWIRE DI ATAS DENGAN BLOK DI BAWAH INI ▼▼▼ --}}
+
+@auth
+    {{-- Jika user sudah login, TAMPILKAN component Livewire yang interaktif --}}
+    @livewire('favorite-button', ['product' => $product], key($product->id))
+@else
+    {{-- Jika user adalah tamu, TAMPILKAN tombol biasa yang mengarah ke halaman login --}}
+    <a href="{{ route('login') }}" class="w-full block text-center bg-gray-300 text-gray-700 font-bold py-2 rounded-md hover:bg-gray-400 transition-colors">
+        Login to Fav
+    </a>
+@endauth
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- Link Pagination dari Laravel --}}
+            <div class="mt-12">
+                {{ $products->links() }}
+            </div>
+        @else
+            <p class="text-center text-gray-500 py-16 text-xl">Oops! Belum ada produk di kategori ini.</p>
+        @endif
+    </div>
+
+@endsection

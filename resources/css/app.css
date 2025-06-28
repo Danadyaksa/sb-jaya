@@ -1,0 +1,44 @@
+/* resources/css/app.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ... sisa custom style-mu ... */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ... baris @tailwind base, components, utilities; ... */
+
+
+/* =============================================== */
+/* Custom Styles untuk Swiper Pagination           */
+/* =============================================== */
+
+/* Memberi jarak atas agar tidak menabrak slider */
+.category-swiper .swiper-pagination {
+    position: relative; /* Mengubah dari absolute agar tidak tumpang tindih */
+    bottom: auto; /* Menghapus posisi default di bawah */
+    margin-top: 2rem; /* Memberi jarak atas sebesar 32px */
+}
+
+/* Mengganti warna titik paginasi yang aktif menjadi merah */
+.swiper-pagination-bullet-active {
+    background-color: #DC2626; /* Ini warna merah (Tailwind red-600) */
+}
+
+/* Opsional: Mengganti warna panah navigasi menjadi merah */
+.category-swiper .swiper-button-next,
+.category-swiper .swiper-button-prev {
+    color: #DC2626;
+}
