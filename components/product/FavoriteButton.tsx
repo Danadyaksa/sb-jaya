@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { createClient } from "@/utils/supabase/client";
+import { useToast } from "@/components/ui/Toast";
 
 interface FavoriteButtonProps {
   productId: number;
@@ -19,6 +20,7 @@ export default function FavoriteButton({
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const toast = useToast();
 
   useEffect(() => {
     setIsMounted(true);
@@ -62,9 +64,11 @@ export default function FavoriteButton({
         if (localFavs.includes(productId)) {
           updated = localFavs.filter((id) => id !== productId);
           setIsFavorited(false);
+          toast.info("Produk dihapus dari Favorit");
         } else {
           updated = [...localFavs, productId];
           setIsFavorited(true);
+          toast.success("Produk ditambahkan ke Favorit");
         }
         localStorage.setItem("sb_favorites", JSON.stringify(updated));
         window.dispatchEvent(new Event("favorites-updated"));
@@ -84,11 +88,13 @@ export default function FavoriteButton({
         .eq("user_id", user.id)
         .eq("product_id", productId);
       setIsFavorited(false);
+      toast.info("Produk dihapus dari Favorit");
     } else {
       await supabase
         .from("favorites")
         .insert({ user_id: user.id, product_id: productId });
       setIsFavorited(true);
+      toast.success("Produk ditambahkan ke Favorit");
     }
 
     setLoading(false);

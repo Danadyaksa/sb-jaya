@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Download } from "lucide-react";
 import { StockMovement } from "@/data/types";
 import { createClient, isSupabaseConfigured } from "@/utils/supabase/client";
+import { exportToCleanCsv } from "@/utils/exportCsv";
 
 export default function StockHistoryPage() {
   const [movements, setMovements] = useState<any[]>([]);
@@ -69,22 +71,91 @@ export default function StockHistoryPage() {
     fetchHistory();
   }, []);
 
+  const handleExportCsv = () => {
+    const headers = [
+      "No",
+      "Tanggal & Waktu",
+      "Nama Produk / Onderdil",
+      "Tipe Mutasi",
+      "Jumlah (Pcs)",
+      "Petugas",
+      "Keterangan",
+    ];
+
+    const rows = movements.map((m, idx) => [
+      idx + 1,
+      new Date(m.created_at).toLocaleString("id-ID"),
+      m.product?.name || `Produk #${m.product_id}`,
+      m.type === "in" ? "MASUK (IN)" : "KELUAR (OUT)",
+      m.quantity,
+      m.user_name || "Admin Gudang",
+      m.notes || "-",
+    ]);
+
+    const totalIn = movements
+      .filter((m) => m.type === "in")
+      .reduce((sum, m) => sum + (Number(m.quantity) || 0), 0);
+
+    const totalOut = movements
+      .filter((m) => m.type === "out")
+      .reduce((sum, m) => sum + (Number(m.quantity) || 0), 0);
+
+    const summaryRow = [
+      "TOTAL",
+      "",
+      "",
+      `IN: ${totalIn} Pcs | OUT: ${totalOut} Pcs`,
+      totalIn - totalOut,
+      "",
+      "",
+    ];
+
+    exportToCleanCsv({
+      filename: `Riwayat_Stok_Gudang_SB_Jaya_${Date.now()}.csv`,
+      title: "Laporan Riwayat Mutasi Stok Gudang",
+      metadata: {
+        "Total Catatan": `${movements.length} Baris`,
+        "Total Barang Masuk (IN)": `${totalIn} Pcs`,
+        "Total Barang Keluar (OUT)": `${totalOut} Pcs`,
+      },
+      headers,
+      rows,
+      summaryRow,
+    });
+  };
+
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">
-        Riwayat Pergerakan Stok
-      </h1>
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-800">
+            Riwayat Pergerakan Stok
+          </h1>
+          <p className="text-sm text-gray-500">
+            Audit log barang masuk dan keluar suku cadang
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={handleExportCsv}
+          disabled={movements.length === 0}
+          className="bg-emerald-600 text-white font-semibold py-2.5 px-4 rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2 shadow-sm text-sm disabled:opacity-50"
+        >
+          <Download className="w-4 h-4" />
+          <span>Export Excel / CSV</span>
+        </button>
+      </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
         <table className="w-full text-left">
           <thead>
-            <tr className="border-b-2 border-gray-200 text-sm">
-              <th className="p-3">Tanggal</th>
-              <th className="p-3">Produk</th>
-              <th className="p-3">Tipe</th>
-              <th className="p-3">Jumlah</th>
-              <th className="p-3">Oleh</th>
-              <th className="p-3">Catatan</th>
+            <tr className="border-b border-gray-200 text-xs uppercase text-gray-500 font-semibold tracking-wider">
+              <th className="py-3 px-3">Tanggal</th>
+              <th className="py-3 px-3">Produk</th>
+              <th className="py-3 px-3">Tipe</th>
+              <th className="py-3 px-3">Jumlah</th>
+              <th className="py-3 px-3">Oleh</th>
+              <th className="py-3 px-3">Catatan</th>
             </tr>
           </thead>
           <tbody>
@@ -96,7 +167,7 @@ export default function StockHistoryPage() {
               </tr>
             ) : movements.length > 0 ? (
               movements.map((movement) => (
-                <tr key={movement.id} className="border-b hover:bg-gray-50 text-sm">
+                <tr key={movement.id} className="border-b last:border-b-0 hover:bg-gray-50 text-sm">
                   <td className="p-3 text-gray-500">
                     {new Date(movement.created_at).toLocaleString("id-ID", {
                       day: "2-digit",
@@ -111,11 +182,11 @@ export default function StockHistoryPage() {
                   </td>
                   <td className="p-3">
                     {movement.type === "in" ? (
-                      <span className="font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded">
+                      <span className="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-xs">
                         IN
                       </span>
                     ) : (
-                      <span className="font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">
+                      <span className="font-semibold text-red-700 bg-red-50 px-2 py-0.5 rounded text-xs">
                         OUT
                       </span>
                     )}

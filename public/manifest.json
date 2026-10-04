@@ -1,0 +1,17 @@
+{
+  "name": "Katalog SB Jaya",
+  "short_name": "SB Jaya",
+  "description": "Katalog suku cadang dan onderdil kendaraan Toko SB Jaya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#DC2626",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

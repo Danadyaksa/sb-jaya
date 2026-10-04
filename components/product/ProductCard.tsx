@@ -17,6 +17,15 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="border border-gray-200 rounded-lg group overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
       <Link href={`/products/${product.slug}`} className="block">
         <div className="bg-white p-4 flex items-center justify-center h-56 relative overflow-hidden">
+          {product.stock === 0 ? (
+            <span className="absolute top-2 left-2 z-10 bg-red-600 text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+              Stok Habis
+            </span>
+          ) : product.stock <= 5 ? (
+            <span className="absolute top-2 left-2 z-10 bg-amber-500 text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+              Stok Terbatas: {product.stock}
+            </span>
+          ) : null}
           <img
             src={imageUrl}
             alt={product.name}

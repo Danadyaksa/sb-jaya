@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageTitleBanner from "@/components/ui/PageTitleBanner";
 import FavoriteButton from "@/components/product/FavoriteButton";
+import ShareProductButton from "@/components/product/ShareProductButton";
 import { getProductBySlug } from "@/data/catalog";
 import { getProductImageUrl, formatIDR } from "@/data/utils";
 
@@ -8,6 +10,47 @@ interface ProductDetailPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
+
+  if (!product) {
+    return {
+      title: "Produk Tidak Ditemukan | Katalog SB Jaya",
+    };
+  }
+
+  const imageUrl = getProductImageUrl(product.image_url || product.image);
+  const partNumber = `SB-${String(product.id).padStart(8, "0")}`;
+  const description =
+    product.description ||
+    `Beli ${product.name} (${partNumber}) dengan harga terbaik di Katalog Toko SB Jaya.`;
+
+  return {
+    title: `${product.name} | Katalog SB Jaya`,
+    description,
+    openGraph: {
+      title: `${product.name} - ${formatIDR(product.price)}`,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          alt: product.name,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} | Katalog SB Jaya`,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ProductDetailPage({
@@ -84,8 +127,13 @@ export default async function ProductDetailPage({
               {formatIDR(product.price)}
             </p>
 
-            <div className="max-w-xs">
+            <div className="max-w-xs space-y-4">
               <FavoriteButton productId={product.id} />
+              <ShareProductButton
+                productName={product.name}
+                productPrice={product.price}
+                partNumber={partNumber}
+              />
             </div>
           </div>
         </div>
