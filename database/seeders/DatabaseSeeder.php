@@ -11,17 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
         $this->call([
-        UserSeeder::class, // <-- Tambahkan ini di paling atas
-        CategorySeeder::class,
-        ProductSeeder::class,
-    ]);
-        // Panggil CategorySeeder yang baru kita buat
-        $this->call([
+            UserSeeder::class,
             CategorySeeder::class,
-            ProductSeeder::class, // <-- Tambahkan ini
-            // Kamu bisa tambahkan Seeder lain di sini nanti
-        ]);   
+            ProductSeeder::class,
+        ]);
     }
 }

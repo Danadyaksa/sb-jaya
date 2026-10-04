@@ -18,5 +18,13 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function getImageUrlAttribute(): string
+    {
+        if ($this->image && file_exists(public_path('storage/' . $this->image))) {
+            return asset('storage/' . $this->image);
+        }
+        return asset('images/default-product.svg');
+    }
 }
 ?>

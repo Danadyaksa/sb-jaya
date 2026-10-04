@@ -11,8 +11,9 @@
             <div>
                 {{-- Gambar Utama dengan Efek Zoom --}}
                 <div class="border border-gray-200 rounded-lg overflow-hidden group"> {{-- <-- Tambah `overflow-hidden` & `group` --}}
-                    <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://via.placeholder.com/600x600/F3F4F6/000000?text=No+Image' }}" 
+                    <img src="{{ $product->image_url }}" 
                          alt="{{ $product->name }}" 
+                         onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';"
                          class="w-full h-96 object-contain bg-white p-4 transition-transform duration-300 ease-in-out group-hover:scale-110"> {{-- <-- Ukuran diubah & class transisi ditambahkan --}}
                 </div>
                 

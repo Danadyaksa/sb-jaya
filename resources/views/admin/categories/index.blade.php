@@ -11,8 +11,9 @@
                     <tr class="border-b hover:bg-gray-50">
                         {{-- Kolom Gambar --}}
                         <td class="p-2">
-                            <img src="{{ $category->image ? asset('storage/' . $category->image) : 'https://via.placeholder.com/100x100/F3F4F6/000000?text=No+Img' }}" 
+                            <img src="{{ $category->image_url }}" 
                                 alt="{{ $category->name }}" 
+                                onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';"
                                 class="w-16 h-16 object-cover rounded-md bg-gray-100">
                         </td>
 

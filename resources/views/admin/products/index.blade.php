@@ -20,8 +20,9 @@
             {{-- Kartu Produk Dinamis dengan Dropdown --}}
 <div class="bg-white border border-gray-200 rounded-lg shadow-md group overflow-hidden">
     <div class="bg-gray-100 p-4 relative">
-        <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://via.placeholder.com/300x300/F3F4F6/000000?text=Produk' }}" 
+        <img src="{{ $product->image_url }}" 
              alt="{{ $product->name }}" 
+             onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';"
              class="w-full h-48 object-contain">
 
                         <div x-data="{ open: false }" @click.outside="open = false" class="absolute top-2 right-2">

@@ -33,7 +33,7 @@
                         {{-- Ini adalah kode kartu kategori kita, sekarang di dalam slide --}}
                         <a href="{{ route('products.by_category', $category) }}" class="block group">
                             <div class="relative overflow-hidden rounded-lg shadow-lg border bg-white p-4 text-center h-full">
-                                <img src="{{ $category->image ? asset('storage/' . $category->image) : 'https://via.placeholder.com/300x200/EEEEEE/000000?text=No+Image' }}" alt="{{ $category->name }}" class="rounded-lg w-full h-48 object-cover">
+                                <img src="{{ $category->image_url }}" alt="{{ $category->name }}" onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';" class="rounded-lg w-full h-48 object-cover">
                                 <h3 class="text-xl font-bold uppercase">{{ $category->name }}</h3>
                                 <p class="text-sm text-gray-500">Shop All &rarr;</p>
                             </div>
@@ -77,7 +77,7 @@
         {{-- Kartu Produk Dinamis --}}
         <div class="border border-gray-200 rounded-lg group overflow-hidden">
     <a href="{{ route('products.show', $product) }}">
-        <div class="bg-white p-4"><img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://via.placeholder.com/300x300/F3F4F6/000000?text=No+Image' }}" class="w-full h-56 object-contain"></div>
+        <div class="bg-white p-4"><img src="{{ $product->image_url }}" alt="{{ $product->name }}" onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';" class="w-full h-56 object-contain"></div>
     </a>
     <div class="p-4">
         <a href="{{ route('products.show', $product) }}"><h3 class="font-bold text-gray-800 text-lg mb-2 truncate hover:text-red-600" title="{{ $product->name }}">{{ $product->name }}</h3></a>
@@ -136,7 +136,7 @@
                     {{-- Gambar --}}
                     <div class="w-1/2">
                          {{-- Ini bagian yang diganti untuk menampilkan gambar dinamis --}}
-                         <img src="{{ $category->image ? asset('storage/' . $category->image) : 'https://via.placeholder.com/300x200/EEEEEE/000000?text=No+Image' }}" alt="{{ $category->name }}" class="rounded-lg w-full h-32 object-cover">
+                          <img src="{{ $category->image_url }}" alt="{{ $category->name }}" onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';" class="rounded-lg w-full h-32 object-cover">
                     </div>
                 </div>
             @empty

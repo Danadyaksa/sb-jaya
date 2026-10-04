@@ -56,7 +56,7 @@
                     <tbody>
                         @foreach ($report->items as $item)
                             <tr class="border-b">
-                                <td class="p-2 flex items-center gap-4"><img src="{{ $item->product->image ? asset('storage/' . $item->product->image) : 'https://via.placeholder.com/100' }}" class="w-12 h-12 object-contain rounded-md bg-gray-100 p-1"><span>{{ $item->product->name }}</span></td>
+                                <td class="p-2 flex items-center gap-4"><img src="{{ $item->product->image_url }}" onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';" class="w-12 h-12 object-contain rounded-md bg-gray-100 p-1"><span>{{ $item->product->name }}</span></td>
                                 <td class="p-2">Rp {{ number_format($item->price, 0, ',', '.') }}</td>
                                 <td class="p-2">{{ $item->quantity }} Pcs</td>
                                 <td class="p-2 text-right font-bold">Rp {{ number_format($item->price * $item->quantity, 0, ',', '.') }}</td>

@@ -11,7 +11,7 @@
                     <div class="border border-gray-200 rounded-lg group overflow-hidden">
                         <a href="{{ route('products.show', $product) }}">
                             <div class="bg-white p-4">
-                                <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://via.placeholder.com/300x300/F3F4F6/000000?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-56 object-contain">
+                                <img src="{{ $product->image_url }}" alt="{{ $product->name }}" onerror="this.onerror=null;this.src='{{ asset('images/default-product.svg') }}';" class="w-full h-56 object-contain">
                             </div>
                         </a>
                         <div class="p-4">
