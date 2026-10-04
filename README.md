@@ -1,61 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Katalog SB Jaya (Next.js 15 + Supabase)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Web aplikasi resmi **Katalog SB Jaya** (Toko Suku Cadang & Onderdil Motor SB Jaya) yang dimigrasikan secara penuh dari Laravel 12 ke **Next.js 15 (App Router, React 19, TypeScript, Tailwind CSS v4)** dengan backend **Supabase (PostgreSQL, Auth, & Storage)**.
 
-## About Laravel
+Aplikasi ini dapat di-deploy ke **Vercel Hobby Plan (100% GRATIS tanpa perlu kartu kredit / credit card)** dan Supabase Free Tier.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Fitur Unggulan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Customer & Pengunjung Publik
+- **Katalog Produk Dinamis**: Pencarian instan, filter kategori, sorting (Termurah, Termahal, Terlaris, Terbaru), dan pagination.
+- **Tampilan Identik 98%+**: Replikasi pixel-perfect dari desain asli (Font Poller One + Poppins, Palet Merah SB Jaya `#DC2626`, Dark Gray `#111827`).
+- **Detail Produk Interaktif**: Image zoom hover, kode part SB otomatis (`SB-00000XXX`), badge stok real-time, dan status ketersediaan.
+- **Wishlist / Favorit**: Tersimpan di `localStorage` untuk pengunjung umum dan sinkron ke database untuk pengguna terdaftar.
+- **Halaman About Us**: Profil SB Jaya, statistik 10+ tahun pengalaman, daftar layanan bengkel/onderdil, jam operasional, kontak WhatsApp, dan embed Google Maps.
 
-## Learning Laravel
+### 2. Panel Admin Kasir (`/admin/products`, `/admin/reports`)
+- **Manajemen Produk (CRUD)**: Tambah, edit, dan hapus suku cadang lengkap dengan upload foto dan modal pembuatan kategori baru instan.
+- **Manajemen Kategori**: Buat dan perbarui kategori onderdil.
+- **POS / Kasir Penjualan**: Keranjang kasir real-time, pencarian barcode/nama produk instan, penyesuaian kuantitas, kalkulasi total & kembalian, cetak struk nota belanja thermal otomatis (`/receipt`), dan pengurangan stok otomatis.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. Panel Admin Gudang (`/admin/stock`, `/admin/stock/history`)
+- **Kontrol Stok Real-time**: Indikator status stok aman (Hijau) vs menipis/kritis (Merah <= 5 pcs).
+- **Penyesuaian Stok Cepat**: Quick-action modal untuk menambah atau mengoreksi stok barang masuk/keluar.
+- **Audit Log Pergerakan Stok**: Riwayat pencatatan keluar/masuk suku cadang dengan tipe `RESTOCK`, `SALE`, atau `CORRECTION`.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Tech Stack
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, Server Components & Server Actions)
+- **UI Library**: React 19, Lucide React Icons, Swiper.js
+- **Styling**: Tailwind CSS v4
+- **Database & Auth**: [Supabase](https://supabase.com/) (PostgreSQL Database, Storage Buckets, Row Level Security)
+- **Deployment**: [Vercel](https://vercel.com/) (Free Tier, Zero Config, No Credit Card)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 💻 Panduan Menjalankan Secara Lokal
 
-### Premium Partners
+1. **Clone Repository & Masuk Direktori**:
+   ```bash
+   git clone https://github.com/Danadyaksa/sb-jaya.git
+   cd sb-jaya
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Contributing
+3. **Salin File Environment**:
+   ```bash
+   cp .env.example .env.local
+   ```
+   *(Catatan: Aplikasi memiliki mode fallback otomatis. Anda dapat langsung menjalankan web meskipun belum mengisi kunci Supabase!)*
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Jalankan Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Buka browser di [http://localhost:3000](http://localhost:3000).
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🌐 Panduan Deploy ke Vercel (100% GRATIS)
 
-## Security Vulnerabilities
+### Langkah 1: Buat Project Supabase (Gratis)
+1. Buka [Supabase](https://supabase.com) dan buat akun gratis (bisa login menggunakan akun GitHub).
+2. Buat project baru bernama `katalog-sbjaya`.
+3. Masuk ke menu **SQL Editor**, buka file `supabase/schema.sql` dari repo ini, copy isinya dan klik **Run**.
+4. Masuk ke menu **Storage**, buat 2 bucket publik:
+   - `products` (Public: Yes)
+   - `categories` (Public: Yes)
+5. Masuk ke **Project Settings -> API**, salin `Project URL` dan `anon public key`.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Langkah 2: Deploy ke Vercel (Tanpa Kartu Kredit)
+1. Buka [Vercel](https://vercel.com) dan login dengan akun GitHub Anda.
+2. Klik **Add New... -> Project**, lalu pilih repository `Danadyaksa/sb-jaya`.
+3. Di bagian **Environment Variables**, tambahkan:
+   - `NEXT_PUBLIC_SUPABASE_URL` = (Project URL dari Supabase)
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = (Anon public key dari Supabase)
+4. Klik **Deploy**! Web Katalog SB Jaya Anda akan online dalam waktu kurang dari 2 menit.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 👥 Akun Demo & Role Akses
+Untuk mencoba modul Kasir atau Gudang:
+- **Kasir**: Email `kasir@sbjaya.com` / Password: `password123`
+- **Gudang**: Email `gudang@sbjaya.com` / Password: `password123`
+- **Customer**: Pengunjung umum dapat langsung berbelanja katalog atau mendaftar di `/register`.
+
+---
+
+© 2026 Toko SB Jaya Motor. All Rights Reserved.

@@ -33,12 +33,12 @@
 - Consumes: Aset gambar lokal (`logo.svg`, `kataloghome.png`, gambar produk, gambar kategori)
 - Produces: Fondasi Next.js 15 yang siap dijalankan dengan font Google `Poller One` dan `Poppins`
 
-- [ ] **Step 1: Pindahkan file Laravel ke `legacy-laravel/` dengan aman**
-- [ ] **Step 2: Inisialisasi Next.js 15 dengan TypeScript dan Tailwind CSS**
-- [ ] **Step 3: Konfigurasi font `Poller One` dan `Poppins` di `app/layout.tsx` dan `globals.css`**
-- [ ] **Step 4: Salin seluruh aset gambar ke `public/images/` dan `public/storage/`**
-- [ ] **Step 5: Verifikasi dev server Next.js berjalan lancar di port 3000**
-- [ ] **Step 6: Commit perubahan fondasi awal**
+- [x] **Step 1: Pindahkan file Laravel ke `legacy-laravel/` dengan aman**
+- [x] **Step 2: Inisialisasi Next.js 15 dengan TypeScript dan Tailwind CSS**
+- [x] **Step 3: Konfigurasi font `Poller One` dan `Poppins` di `app/layout.tsx` dan `globals.css`**
+- [x] **Step 4: Salin seluruh aset gambar ke `public/images/` dan `public/storage/`**
+- [x] **Step 5: Verifikasi dev server Next.js berjalan lancar di port 3000**
+- [x] **Step 6: Commit perubahan fondasi awal**
 
 ---
 
@@ -56,12 +56,12 @@
 - Consumes: Kredensial Supabase (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`)
 - Produces: Supabase clients untuk Server Components, Client Components, dan Middleware
 
-- [ ] **Step 1: Install `@supabase/ssr` dan `@supabase/supabase-js`**
-- [ ] **Step 2: Buat helper Supabase client (`client.ts`, `server.ts`, `middleware.ts`)**
-- [ ] **Step 3: Buat file `supabase/schema.sql` dengan struktur tabel lengkap dan RLS policies**
-- [ ] **Step 4: Jalankan script seeding untuk mengisi kategori, produk, dan profil staf ke Supabase**
-- [ ] **Step 5: Verifikasi koneksi data Supabase dapat membaca produk dan kategori**
-- [ ] **Step 6: Commit konfigurasi Supabase**
+- [x] **Step 1: Install `@supabase/ssr` dan `@supabase/supabase-js`**
+- [x] **Step 2: Buat helper Supabase client (`client.ts`, `server.ts`, `middleware.ts`)**
+- [x] **Step 3: Buat file `supabase/schema.sql` dengan struktur tabel lengkap dan RLS policies**
+- [x] **Step 4: Jalankan script seeding untuk mengisi kategori, produk, dan profil staf ke Supabase**
+- [x] **Step 5: Verifikasi koneksi data Supabase dapat membaca produk dan kategori**
+- [x] **Step 6: Commit konfigurasi Supabase**
 
 ---
 

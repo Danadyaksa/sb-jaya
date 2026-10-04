@@ -1,0 +1,444 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "INTERIOR",
+            "slug": "interior",
+            "image": "categories\/FxRkdpQ7rmR3NV4Z5AF8LCM6frOTJBsyfODCr5cp.jpg"
+        },
+        {
+            "id": 2,
+            "name": "EKSTERIOR",
+            "slug": "eksterior",
+            "image": "categories\/lR6XK3nLBDSYNdjeM6Mp8gSh8ow1y0I1CmgUch2B.jpg"
+        },
+        {
+            "id": 3,
+            "name": "PELUMAS",
+            "slug": "pelumas",
+            "image": "categories\/y75jDj9offL5ZCyjKpW7xgbgTApgUp8bVtf8FLKC.jpg"
+        },
+        {
+            "id": 4,
+            "name": "AUDIO & MULTIMEDIA",
+            "slug": "audio-multimedia",
+            "image": "categories\/Tmuy6mkjtjFJmYxQID8MeHRLrYcQtjRXuzYV0Utu.jpg"
+        },
+        {
+            "id": 5,
+            "name": "KEAMANAN & EMERGENCY",
+            "slug": "keamanan-emergency",
+            "image": "categories\/Nmfe5gqMjD2mWfrNkK4hgHGi9PkOOjaGv1R8DHvv.jpg"
+        },
+        {
+            "id": 6,
+            "name": "LAMPU & ELEKTRONIK",
+            "slug": "lampu-elektronik",
+            "image": "categories\/BWFBCNCnriaDSiGABjlFP40clIKxwWyVAZpB76FR.jpg"
+        },
+        {
+            "id": 8,
+            "name": "KACA FILM",
+            "slug": "kaca-film",
+            "image": "categories\/mPja2ZIw3DJcbwHlzjwceT2SMhmdh8HXyzUsCx6j.png"
+        },
+        {
+            "id": 9,
+            "name": "ELEKTRONIK DAN GADGET",
+            "slug": "elektronik-dan-gadget",
+            "image": "categories\/HxsXhPfYPZZmzvxoxSbdTnH4UUZ9lJiGHXWGBTXA.png"
+        },
+        {
+            "id": 10,
+            "name": "MAINAN",
+            "slug": "mainan",
+            "image": null
+        }
+    ],
+    "products": [
+        {
+            "id": 5,
+            "name": "Shell Helix HX8 5W-30",
+            "slug": "shell-helix-hx8-5w-30",
+            "brand": "Shell",
+            "description": "Shell Helix HX8 5W-30 adalah oli mesin full synthetic berteknologi tinggi yang dirancang untuk kendaraan modern dengan standar performa tinggi. Diformulasikan dengan teknologi Active Cleansing dari Shell, oli ini secara aktif membantu menjaga kebersihan mesin, meningkatkan efisiensi bahan bakar, dan memperpanjang usia komponen vital kendaraan Anda.",
+            "price": "500000.00",
+            "stock": 8,
+            "color": null,
+            "image": "products\/MU0zDjrv4nZvLgHj6eKTPicJnjLVNUEsO5Myj0tL.jpg",
+            "category_id": 3
+        },
+        {
+            "id": 6,
+            "name": "Mobil Super All-in-One Protection 5W-30",
+            "slug": "mobil-super-all-in-one-protection-5w-30",
+            "brand": "Mobil",
+            "description": "Mobil Super All-in-One Protection 5W-30 adalah oli mesin full synthetic yang dirancang khusus untuk memberikan perlindungan menyeluruh pada mesin kendaraan Anda. Dengan teknologi aditif canggih, oli ini mampu menjaga kestabilan performa mesin, mengurangi keausan, serta membantu meningkatkan efisiensi bahan bakar dalam berbagai kondisi berkendara.",
+            "price": "465000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/Y4p81RAMSQThJpAqmJZLZZhlhi7wNXi52Tcm9W6m.png",
+            "category_id": 3
+        },
+        {
+            "id": 7,
+            "name": "Pertamina Prima XP 20W-50",
+            "slug": "pertamina-prima-xp-20w-50",
+            "brand": "Pertamina",
+            "description": "Pertamina Prima XP 20W-50 adalah oli mesin multigrade berkualitas tinggi yang cocok untuk kendaraan bermesin bensin maupun diesel. Memberikan pelumasan optimal, perlindungan terhadap aus, dan performa maksimal bahkan dalam kondisi berkendara berat.",
+            "price": "220000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/Vzspmcw3xLDaPcVTgPeJOt690tlc2olSxHjnLD6r.png",
+            "category_id": 3
+        },
+        {
+            "id": 8,
+            "name": "ENEOS Motor Oil 4 Cycle",
+            "slug": "eneos-motor-oil-4-cycle",
+            "brand": "ENEOS",
+            "description": "ENEOS Motor Oil 4 Cycle adalah pelumas berkualitas tinggi untuk sepeda motor 4-tak. Diformulasikan untuk menjaga performa mesin, mengurangi gesekan, dan memberikan perlindungan maksimal terhadap aus dan korosi.",
+            "price": "75000.00",
+            "stock": 9,
+            "color": null,
+            "image": "products\/DEQysUmrbdOKVYDVpAMV9oDcRC5o5VI46fm8gQbp.png",
+            "category_id": 3
+        },
+        {
+            "id": 9,
+            "name": "STP Tuff Stuff Foam Cleaner",
+            "slug": "stp-tuff-stuff-foam-cleaner",
+            "brand": "STP",
+            "description": "STP Tuff Stuff Foam Cleaner adalah pembersih serbaguna berbentuk busa yang efektif membersihkan permukaan interior mobil seperti jok kain, vinil, karpet, dan dashboard. Mudah digunakan dan memberikan hasil bersih tanpa residu.",
+            "price": "100000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/o3vdWPw6bsPFUppiugXOHA3fmNsjdRPezGueTrEp.png",
+            "category_id": 1
+        },
+        {
+            "id": 10,
+            "name": "Turtle Wax ICE Interior Cleaner",
+            "slug": "turtle-wax-ice-interior-cleaner",
+            "brand": "Turtle Wax",
+            "description": "Turtle Wax ICE Interior Cleaner adalah pembersih interior premium yang diformulasikan untuk mengangkat debu, kotoran, dan noda dari permukaan dalam mobil. Cocok untuk dashboard, panel pintu, dan permukaan vinyl atau plastik dengan hasil bersih dan berkilau.",
+            "price": "230000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/Rt3Nw0iR4m97XSdaCZI89X9z5vqsFxCZibjqkOJA.png",
+            "category_id": 1
+        },
+        {
+            "id": 11,
+            "name": "ArmorAll Stain Remover Aerosol",
+            "slug": "armorall-stain-remover-aerosol",
+            "brand": "ArmorAll",
+            "description": "ArmorAll Stain Remover Aerosol dirancang khusus untuk menghilangkan noda membandel pada kain dan permukaan interior kendaraan. Formula semprotannya bekerja cepat dan efisien, menjadikan interior mobil tampak bersih dan segar kembali.",
+            "price": "110000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/vgvxpovTRVMRIsYrLRlHrW1XzZauZ7Pu4REGWwur.png",
+            "category_id": 1
+        },
+        {
+            "id": 12,
+            "name": "Carrera Dashboard Cleaner",
+            "slug": "carrera-dashboard-cleaner",
+            "brand": "Carrera",
+            "description": "Carrera Dashboard Cleaner adalah pembersih khusus untuk permukaan dashboard dan interior mobil lainnya. Membantu mengangkat debu dan kotoran ringan, serta memberikan hasil akhir bersih dan mengkilap tanpa meninggalkan\u00a0bekas.",
+            "price": "35000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/SfTRIWXTGGYvMpQHfiAar19Oeq49pr6QfgyS9xkU.png",
+            "category_id": 1
+        },
+        {
+            "id": 13,
+            "name": "Prestige Sarung Mobil SUV Tipe C",
+            "slug": "prestige-sarung-mobil-suv-tipe-c",
+            "brand": "Prestige",
+            "description": "Prestige Sarung Mobil SUV Tipe C dirancang khusus untuk perlindungan maksimal kendaraan SUV Anda dari debu, panas matahari, hujan, dan goresan ringan. Menggunakan bahan berkualitas tinggi, sarung ini memberikan perlindungan menyeluruh baik saat parkir di luar maupun di dalam ruangan.",
+            "price": "1650000.00",
+            "stock": 10,
+            "color": "Abu-Abu",
+            "image": "products\/cFmx2zw9aMcSsqYGbinaZGK4wa59ITmBjyOaiInP.png",
+            "category_id": 2
+        },
+        {
+            "id": 14,
+            "name": "Stoner Rain Repellent",
+            "slug": "stoner-rain-repellent",
+            "brand": "Stoner",
+            "description": "Stoner Rain Repellent adalah cairan pelindung kaca yang menciptakan lapisan anti air, sehingga air hujan langsung tergelincir dari kaca. Ideal untuk meningkatkan visibilitas saat berkendara dalam kondisi hujan dan menjaga kaca tetap bersih lebih lama.",
+            "price": "190000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/RXJzMIztAO9TKTC1JgL1eTIodiyunqvdYedkFn5r.png",
+            "category_id": 2
+        },
+        {
+            "id": 15,
+            "name": "Sonax Ceramic Spray Coating",
+            "slug": "sonax-ceramic-spray-coating",
+            "brand": "Sonax",
+            "description": "Sonax Ceramic Spray Coating memberikan lapisan pelindung keramik dengan aplikasi mudah hanya dengan semprotan. Melindungi cat mobil dari air, kotoran, dan sinar UV sambil memberikan efek kilap seperti baru.",
+            "price": "110000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/R8qPdpsUWcZDfN2CmpgY0MIDBQorEtewdz1tVzso.png",
+            "category_id": 2
+        },
+        {
+            "id": 16,
+            "name": "VHT Dupli-Color Coating Lampu Merah",
+            "slug": "vht-dupli-color-coating-lampu-merah",
+            "brand": "VHT",
+            "description": "VHT Dupli-Color Coating Lampu Merah adalah semprotan khusus untuk memberikan efek warna merah pada lampu kendaraan. Cocok untuk modifikasi ringan atau restorasi tampilan lampu agar terlihat lebih stylish dan berbeda.",
+            "price": "35000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/dD7Lt3WiUDsKmbnc2MSZ9MDQ2CT3HUG91nYf4p6s.png",
+            "category_id": 2
+        },
+        {
+            "id": 17,
+            "name": "Pioneer DEH-S1250UB Head Unit",
+            "slug": "pioneer-deh-s1250ub-head-unit",
+            "brand": "Pioneer",
+            "description": "Pioneer DEH-S1250UB adalah head unit berkualitas tinggi dengan pemutar CD, USB, dan AUX. Memberikan kualitas suara jernih dan fitur kontrol audio yang lengkap, cocok untuk Anda yang ingin meningkatkan sistem hiburan mobil dengan harga terjangkau.",
+            "price": "1200000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/NdMvKJZvJ6ti8T81iihGtIuyklNLHw2KHtJmJy1o.png",
+            "category_id": 4
+        },
+        {
+            "id": 18,
+            "name": "Nakamichi Coaxial NSF623",
+            "slug": "nakamichi-coaxial-nsf623",
+            "brand": "Nakamichi",
+            "description": "Nakamichi Coaxial NSF623 adalah speaker mobil 2-way yang menawarkan kejernihan suara dan bass yang seimbang. Cocok untuk pengganti speaker bawaan mobil Anda agar pengalaman audio lebih maksimal.",
+            "price": "235000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/RRJgR55shNz5zQNumsbtRuuMlSR2R2hMTAa7QhZ1.png",
+            "category_id": 4
+        },
+        {
+            "id": 19,
+            "name": "Kenwood DMX5023S Head Unit",
+            "slug": "kenwood-dmx5023s-head-unit",
+            "brand": "Kenwood",
+            "description": "Kenwood DMX5023S adalah head unit layar sentuh berukuran 6.8 inch dengan dukungan Apple CarPlay dan Android Auto. Menyediakan fitur konektivitas lengkap, tampilan modern, serta kualitas audio yang superior untuk pengalaman berkendara yang lebih nyaman.",
+            "price": "220000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/g73xXYQllXKGJXdzeB0FJv6GXTVPJ9aFnGcDNHUH.png",
+            "category_id": 4
+        },
+        {
+            "id": 20,
+            "name": "Skeleton SKT-8197 Head Unit 7 Inch",
+            "slug": "skeleton-skt-8197-head-unit-7-inch",
+            "brand": "Skeleton",
+            "description": "Skeleton SKT-8197 adalah head unit layar sentuh 7 inch yang dilengkapi fitur multimedia seperti USB, radio, dan video playback. Ideal untuk pengguna yang menginginkan upgrade sistem hiburan mobil dengan layar besar dan fitur lengkap.",
+            "price": "400000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/Uju1wJ5psZ6ity0kR4GPNpoGEbN4EtCi47flwP07.png",
+            "category_id": 4
+        },
+        {
+            "id": 21,
+            "name": "Kunci Stir Mobil Model T",
+            "slug": "kunci-stir-mobil-model-t",
+            "brand": null,
+            "description": "Kunci stir model T adalah alat pengaman praktis untuk mencegah pencurian mobil. Desain kokoh dan mudah dipasang membuatnya menjadi solusi keamanan yang andal saat parkir di tempat umum.",
+            "price": "180000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/tjYhXXmB2fGw4TP5kqE4V1aRabMeUOlcqH1JdX0U.png",
+            "category_id": 5
+        },
+        {
+            "id": 22,
+            "name": "Helios Alarm Mobil G2 - Car Alarm System Universal - 687",
+            "slug": "helios-alarm-mobil-g2-car-alarm-system-universal-687",
+            "brand": "Helios",
+            "description": "Helios Alarm G2 adalah sistem alarm mobil universal yang dilengkapi remote dan fitur keamanan canggih. Mendeteksi gangguan secara real-time untuk menjaga kendaraan tetap aman dari upaya pencurian.",
+            "price": "315000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/2IVfYtpPBdkrIZrlx46Ci81sWQnTXbnGhfWcKa8F.png",
+            "category_id": 5
+        },
+        {
+            "id": 23,
+            "name": "APAR Mobil Safety Powder ABC 1KG",
+            "slug": "apar-mobil-safety-powder-abc-1kg",
+            "brand": "ABC",
+            "description": "Alat Pemadam Api Ringan (APAR) untuk kendaraan, menggunakan bubuk ABC yang efektif memadamkan api dari berbagai sumber. Wajib dimiliki sebagai perlindungan darurat di dalam mobil Anda.",
+            "price": "220000.00",
+            "stock": 10,
+            "color": "Merah",
+            "image": "products\/rgaLGSDw95IPcdc0hj4Z0HDIXMUfVB45ykdlkiJM.png",
+            "category_id": 5
+        },
+        {
+            "id": 24,
+            "name": "Segitiga Pengaman Reflektif",
+            "slug": "segitiga-pengaman-reflektif",
+            "brand": null,
+            "description": "Segitiga pengaman reflektif digunakan saat kendaraan mogok untuk memberikan tanda peringatan kepada pengendara lain. Penting untuk keselamatan saat darurat di jalan.",
+            "price": "50000.00",
+            "stock": 10,
+            "color": "Merah",
+            "image": "products\/JuvdSyZZzUaQu7QrmGz8X5naYGQBSHkkbKpQRrMy.png",
+            "category_id": 5
+        },
+        {
+            "id": 25,
+            "name": "Osram LEDriving HL XLZ 3.0 H8\/H11 - Lampu Kabut LED",
+            "slug": "osram-ledriving-hl-xlz-30-h8h11-lampu-kabut-led",
+            "brand": "Osram",
+            "description": "Osram LEDriving HL XLZ 3.0 adalah lampu kabut LED dengan pencahayaan terang dan fokus, cocok untuk kondisi berkabut atau hujan. Efisien dan tahan lama, cocok untuk upgrade sistem pencahayaan mobil.",
+            "price": "1106000.00",
+            "stock": 10,
+            "color": "Putih",
+            "image": "products\/fol7iWqE66kKJXrRgDXSuZfCn6no13Iih6ndcqkV.png",
+            "category_id": 6
+        },
+        {
+            "id": 26,
+            "name": "LED Philips H4 Xtreme Ultinon Pro9000 Headlamp 5800",
+            "slug": "led-philips-h4-xtreme-ultinon-pro9000-headlamp-5800",
+            "brand": "Philips",
+            "description": "Headlamp LED Philips Xtreme Ultinon Pro9000 memberikan cahaya sangat terang dan jangkauan luas, meningkatkan visibilitas berkendara malam hari. Dirancang dengan standar OEM dan daya tahan tinggi.",
+            "price": "2515000.00",
+            "stock": 10,
+            "color": "Putih",
+            "image": "products\/u0dgEeozVC8NV9tN7iXvUGd6UXdmT8DBkmnSq4mB.png",
+            "category_id": 6
+        },
+        {
+            "id": 27,
+            "name": "Lampu Kabin LED T10 CanBus SMD 3014 - 33 Titik Mata",
+            "slug": "lampu-kabin-led-t10-canbus-smd-3014-33-titik-mata",
+            "brand": "CanBus",
+            "description": "Lampu kabin LED T10 CanBus menghadirkan pencahayaan terang dan hemat daya di dalam mobil. Dengan 33 titik cahaya, lampu ini memberikan penerangan merata dan tahan lama.",
+            "price": "10000.00",
+            "stock": 10,
+            "color": "Putih",
+            "image": "products\/0C56ChHZ46aYhMYPy8D5i5Xl6wxuilaYndFewyuC.png",
+            "category_id": 6
+        },
+        {
+            "id": 28,
+            "name": "Charger Mobil Wellcomm 3.0A Fast Charging",
+            "slug": "charger-mobil-wellcomm-30a-fast-charging",
+            "brand": "Wellcomm",
+            "description": "Charger Mobil Wellcomm 3.0A mendukung pengisian cepat untuk berbagai perangkat. Cocok digunakan saat perjalanan jauh agar gadget selalu terisi penuh dengan efisiensi\u00a0maksimal.",
+            "price": "102000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/EC9JFGoImnoc6xM2YgbGyOqQUgUrDWATTFFQ4m1o.png",
+            "category_id": 6
+        },
+        {
+            "id": 30,
+            "name": "3M AutoFilm Black Beauty Series",
+            "slug": "3m-autofilm-black-beauty-series",
+            "brand": "3M",
+            "description": "3M AutoFilm Black Beauty Series menawarkan perlindungan maksimal dari sinar UV serta mengurangi panas dalam kabin. Dikenal dengan kualitas premium dan ketahanan tinggi, kaca film ini menjaga kenyamanan dan privasi saat berkendara.\n",
+            "price": "1200000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/YDlfJQSFOncA8yFljnZiAw5MncHn5q9WFfP8NTCU.png",
+            "category_id": 8
+        },
+        {
+            "id": 31,
+            "name": "V-Kool VK70 Kaca Film",
+            "slug": "v-kool-vk70-kaca-film",
+            "brand": "V-Kool",
+            "description": "V-Kool VK70 adalah kaca film teknologi tinggi dengan performa tolak panas terbaik tanpa mengurangi visibilitas. Ideal untuk pengguna yang mengutamakan kenyamanan dan penampilan elegan tanpa gelap berlebihan.\n\n",
+            "price": "2715000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/N8DXDUCczMGBjoOGJalWxXkw9TYVCTWkar5An80R.png",
+            "category_id": 8
+        },
+        {
+            "id": 32,
+            "name": "Solar Gard Premium Black Phantom - M",
+            "slug": "solar-gard-premium-black-phantom-m",
+            "brand": "Solar Gard",
+            "description": "Solar Gard Black Phantom memberikan tampilan gelap elegan sekaligus melindungi dari sinar UV dan panas matahari. Cocok untuk pengguna yang ingin kombinasi performa dan gaya pada kaca mobil mereka.\n",
+            "price": "220000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/MUZBtxlt5ysY620I4V7tpHPnikfs81PxoAZxB7tf.png",
+            "category_id": 8
+        },
+        {
+            "id": 33,
+            "name": "Masterpiece Black Shinju - S",
+            "slug": "masterpiece-black-shinju-s",
+            "brand": "Masterpiece",
+            "description": "Masterpiece Black Shinju adalah kaca film berkualitas premium yang dirancang untuk memberikan proteksi dan privasi maksimal. Tersedia untuk kendaraan kecil, produk ini juga menambah kesan eksklusif pada mobil Anda.\n",
+            "price": "1750000.00",
+            "stock": 10,
+            "color": null,
+            "image": "products\/Xu0abVF53cMt941WGI3xqSo5RM5JyYeEhseACgMS.png",
+            "category_id": 8
+        },
+        {
+            "id": 35,
+            "name": "GPS Tracker Mobil GT06N",
+            "slug": "gps-tracker-mobil-gt06n",
+            "brand": "Concox",
+            "description": "GPS Tracker GT06N dari Concox adalah perangkat pelacak kendaraan dengan fitur real-time tracking, geo-fence, dan alarm pencurian. Dapat diakses melalui aplikasi atau web, cocok untuk pemilik mobil pribadi maupun armada usaha. Desain ringkas dan pemasangan mudah membuatnya ideal untuk meningkatkan keamanan kendaraan Anda.\n",
+            "price": "850000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/oIehGGMoVexfJuMLbbtvBeFIHvpJ39fzAHC5msFg.jpg",
+            "category_id": 9
+        },
+        {
+            "id": 36,
+            "name": "Wireless Phone Holder Charger",
+            "slug": "wireless-phone-holder-charger",
+            "brand": "AutoGrip",
+            "description": "Deskripsi : Dudukan ponsel mobil dengan fitur pengisian daya wireless fast charging. Didesain ergonomis dengan sensor otomatis, memastikan genggaman kuat dan praktis saat berkendara.\n",
+            "price": "275000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/KWOKP3Yx3OefVQmJJiObqbgn1SglMQAbuw9unVAQ.jpg",
+            "category_id": 9
+        },
+        {
+            "id": 37,
+            "name": "USB Charger Mobil 4 Port",
+            "slug": "usb-charger-mobil-4-port",
+            "brand": "VoltPro",
+            "description": "Charger mobil dengan 4 port USB dan output fast charging 3.1A. Ideal untuk mengisi daya beberapa perangkat sekaligus selama perjalanan\u00a0jauh.",
+            "price": "120000.00",
+            "stock": 10,
+            "color": "Hitam",
+            "image": "products\/sdWDGUEGxUyCBFTDvcvK9VXfI8RHJl99EmnRYEkh.jpg",
+            "category_id": 9
+        },
+        {
+            "id": 51,
+            "name": "wawa",
+            "slug": "wawa",
+            "brand": "gege",
+            "description": "ini test",
+            "price": "50000.00",
+            "stock": 5,
+            "color": null,
+            "image": "products\/sDXOVNidyjnKj5YnZywl83cauVIk8psmftBz2yHy.jpg",
+            "category_id": 10
+        }
+    ]
+}

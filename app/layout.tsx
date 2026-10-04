@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poller_One, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import SubNavbar from "@/components/layout/SubNavbar";
+import Footer from "@/components/layout/Footer";
 
 const pollerOne = Poller_One({
   weight: "400",
@@ -27,9 +30,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${pollerOne.variable} ${poppins.variable} font-poppins`}>
-      <body className="min-h-screen bg-gray-100 flex flex-col font-sans antialiased text-gray-900">
-        {children}
+    <html lang="id" className={`${pollerOne.variable} ${poppins.variable} font-poppins scroll-smooth`}>
+      <body id="page-top" className="min-h-screen bg-gray-100 flex flex-col font-sans antialiased text-gray-900">
+        <Header />
+        <SubNavbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
